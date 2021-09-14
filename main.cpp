@@ -13,14 +13,14 @@ public:
 	Nodo * next;
 };
 
-class Lista
+class Stack
 {
 public:
-	Lista()
+	Stack()
 	{
 		head=nullptr;
 	}
-	void addlista(int num)
+	void addstack(int num)
 	{
 		if(!head)
 			head=new Nodo(num);
@@ -34,7 +34,7 @@ public:
 			tmp->next=new Nodo(num);
 		}
 	}
-	void printLista()
+	void printstack()
 	{
 		Nodo * tmp=head;
 		cout<<tmp->num;
@@ -50,13 +50,10 @@ private:
 
 int main(int argc, char const *argv[])
 {
-	Lista * lista  = new Lista;   
-	lista->addlista(1);
-	lista->addlista(2);
-	lista->addlista(3);
-	lista->printLista();
-	cout<<"Hola ,mundo";
-	/* code */
+	Stack * mystack  = new Stack;   
+	mystack->addlista(1);
+	mystack->addlista(2);
+	mystack->addlista(3);
+	mystack->printLista();
 	return 0 ;
-
 }
